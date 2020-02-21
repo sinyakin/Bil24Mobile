@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/dialogAdminTextView"
+      android:layout_alignParentTop="true"
+      style="?android:attr/textAppearanceMedium"
+      android:text="Выберите зону" android:textStyle="bold" android:paddingBottom="15dp">
+  </TextView>
+
+  <RadioGroup
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:id="@+id/dialogAdminRadioGroup"
+      android:layout_marginTop="10dp" android:layout_below="@+id/dialogAdminTextView">
+
+    <com.rey.material.widget.RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/real_zone"
+        android:id="@+id/dialogAdminRBReal"
+        style="?android:attr/textAppearanceMedium" android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"/>
+
+    <com.rey.material.widget.RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_zone"
+        android:id="@+id/dialogAdminRBTest"
+        style="?android:attr/textAppearanceMedium" android:gravity="center_vertical"/>
+  </RadioGroup>
+
+  <com.rey.material.widget.CheckBox
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/showing_service_info"
+      android:id="@+id/dialogAdminCBServiceInfo"
+      style="?android:attr/textAppearanceMedium"
+      android:layout_marginTop="10dp"
+      android:gravity="center_vertical" android:layout_below="@+id/dialogAdminRadioGroup"/>
+
+  <com.rey.material.widget.Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/dialog_cancel_button"
+      android:padding="5dp"
+      android:textColor="@color/toolbar"
+      style="@style/DefaultButtonStyle"
+      android:id="@+id/adminDialogButtonCancel" android:layout_marginTop="10dp"
+      android:layout_alignBaseline="@+id/adminDialogButtonOk" android:layout_toLeftOf="@+id/adminDialogButtonOk"/>
+
+  <com.rey.material.widget.Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/dialog_button_ok"
+      android:padding="5dp"
+      android:textColor="@color/toolbar"
+      style="@style/DefaultButtonStyle"
+      android:id="@+id/adminDialogButtonOk"
+      android:layout_marginTop="10dp" android:layout_below="@+id/dialogAdminCBServiceInfo"
+      android:layout_alignRight="@+id/dialogAdminCBServiceInfo"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/dialog_bg"
+              android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_app"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:id="@+id/tvUpdateApplication"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:id="@+id/btnOk"
+        android:drawableRight="@drawable/google_play"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button1_bg"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/button_text_size"
+        android:layout_below="@+id/tvUpdateApplication"
+        android:padding="10dp"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+            />
+</RelativeLayout>

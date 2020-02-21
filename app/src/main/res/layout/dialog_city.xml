@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:padding="10dp">
+
+  <com.rey.material.widget.TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/aboutCity"
+      android:id="@+id/cityDialogTextView"
+      android:visibility="visible" android:layout_alignParentTop="true"
+      android:layout_marginLeft="15dp" android:layout_marginRight="15dp"
+      android:layout_marginBottom="10dp" android:textSize="@dimen/city_dialog_text1"/>
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" android:id="@+id/cityDialogLoadingPanel"
+      android:layout_marginTop="10dp"
+      android:layout_below="@+id/cityDialogTextView">
+  </com.bil24.myelement.MyLoadingPanel>
+
+  <com.bil24.myelement.MySpinner
+      android:id="@+id/cityDialogSpinner"
+      style="@style/Material.Widget.Spinner"
+      android:layout_width="fill_parent"
+      android:layout_height="50dp"
+      app:rd_style="@style/Material.Drawable.Ripple.Wave"
+      android:layout_margin="10dp" android:layout_below="@+id/cityDialogTextView"/>
+
+</RelativeLayout>

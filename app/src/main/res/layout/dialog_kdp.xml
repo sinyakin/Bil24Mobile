@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:padding="10dp">
+
+  <com.rey.material.widget.TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/aboutKdp"
+      android:id="@+id/kdpDialogTextView"
+      android:visibility="visible" android:layout_alignParentTop="true"
+      android:layout_marginLeft="15dp" android:layout_marginRight="15dp"
+      android:layout_marginBottom="10dp" android:textSize="@dimen/city_dialog_text1"/>
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" android:id="@+id/kdpDialogLoadingPanel"
+      android:layout_marginTop="10dp"
+      android:layout_below="@+id/kdpDialogTextView">
+  </com.bil24.myelement.MyLoadingPanel>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/kdpDialogEditTextKdp"
+      android:text="" android:layout_below="@+id/kdpDialogTextView" android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

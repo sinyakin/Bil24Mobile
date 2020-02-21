@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:padding="10dp"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Билеты будут отправлены на адрес:"
+      android:id="@+id/sendTicketToEmailTVInfo"
+      android:textSize="@dimen/text_default"/>
+  <EditText
+      android:id="@+id/sendTicketToEmailEV"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="введите e-mail" android:layout_marginTop="10dp"/>
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" android:id="@+id/sendTicketToEmailLoadingPanel"
+      android:layout_marginTop="10dp">
+  </com.bil24.myelement.MyLoadingPanel>
+
+</LinearLayout>

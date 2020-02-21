@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="6dp"
+                                    android:shape="ring">
+
+  <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:listSelector="@android:color/transparent"
+                android:padding="10dp" android:baselineAligned="false">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:scaleType="fitXY"
+          android:adjustViewBounds="true"
+          app:riv_corner_radius="5dp"
+          android:id="@+id/orderInfoAdapterPoster1" android:src="@drawable/poster1"
+          android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3" android:paddingLeft="10dp" android:paddingRight="10dp">
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Событие"
+          android:id="@+id/orderInfoAdapterActionName"
+          android:textSize="@dimen/order_text" android:layout_alignParentTop="true"
+          android:layout_marginTop="@dimen/order_info_m_top1"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Билетов:"
+          android:id="@+id/orderInfoAdapterTickets"
+          android:textSize="@dimen/order_text"
+          android:layout_alignParentLeft="true" android:layout_marginTop="@dimen/order_info_m_top2"
+          android:layout_below="@+id/orderInfoAdapterActionName"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Сумма: "
+          android:id="@+id/orderInfoAdapterSum"
+          android:textSize="@dimen/order_text"
+          android:layout_marginTop="@dimen/order_info_m_top3"
+          android:layout_below="@+id/orderInfoAdapterTickets"/>
+    </RelativeLayout>
+
+  </LinearLayout>
+</android.support.v7.widget.CardView>

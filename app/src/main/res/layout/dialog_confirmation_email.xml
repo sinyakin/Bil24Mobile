@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/dialogHeaderTextView"
+      android:layout_alignParentTop="true"
+      style="?android:attr/textAppearanceMedium"
+      android:text="Подтверждение почты" android:textStyle="bold" android:paddingBottom="15dp">
+  </TextView>
+
+  <FrameLayout
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/confirmationEmailDialogRootPanel"
+      android:layout_below="@+id/dialogHeaderTextView">
+
+    <com.bil24.myelement.MyLoadingPanel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmationEmailDialogLoadingPanel"
+        android:layout_marginTop="10dp">
+    </com.bil24.myelement.MyLoadingPanel>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmationEmailDialogPanel1" android:visibility="gone">
+      <com.rey.material.widget.TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/aboutConfirmEmail1"
+          android:id="@+id/confirmationEmailDialogTextView" style="?android:attr/textAppearanceMedium"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/confirmationEmailDialogEditTextEmail"
+          android:text=""
+          android:layout_below="@+id/confirmationEmailDialogTextView"
+          android:inputType="textEmailAddress" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+
+      <com.rey.material.widget.Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/dialog_cancel_button"
+          android:padding="5dp"
+          android:textColor="@color/toolbar"
+          style="@style/DefaultButtonStyle"
+          android:id="@+id/confirmationEmailDialogButtonCancel1"
+          android:layout_below="@+id/confirmationEmailDialogEditTextEmail"
+          android:layout_toLeftOf="@+id/confirmationEmailDialogButtonBindEmail" android:layout_marginTop="10dp"/>
+
+      <com.rey.material.widget.Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/dialog_confirmation_email_button_send_code"
+          android:padding="5dp"
+          android:textColor="@color/toolbar"
+          style="@style/DefaultButtonStyle"
+          android:id="@+id/confirmationEmailDialogButtonBindEmail"
+          android:layout_marginTop="10dp"
+          android:layout_below="@+id/confirmationEmailDialogEditTextEmail"
+          android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmationEmailDialogPanel2">
+      <com.rey.material.widget.TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/aboutConfirmEmail2"
+          android:id="@+id/confirmationEmailDialogTextView1"
+          style="?android:attr/textAppearanceMedium"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/confirmationEmailDialogEditTextCode"
+          android:text=""
+          android:layout_below="@+id/confirmationEmailDialogTextView1"
+          android:inputType="number" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
+          tools:ignore="TextFields"/>
+
+      <com.rey.material.widget.Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/dialog_cancel_button"
+          android:textColor="@color/toolbar"
+          style="@style/DefaultButtonStyle"
+          android:id="@+id/confirmationEmailDialogButtonCancel2"
+          android:layout_below="@+id/confirmationEmailDialogEditTextCode"
+          android:layout_toLeftOf="@+id/confirmationEmailDialogButtonConfirmEmail" android:layout_marginTop="10dp"/>
+
+      <com.rey.material.widget.Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/dialog_confirmation_email_button_check"
+          android:textColor="@color/toolbar"
+          style="@style/DefaultButtonStyle"
+          android:id="@+id/confirmationEmailDialogButtonConfirmEmail"
+          android:layout_marginTop="10dp"
+          android:layout_below="@+id/confirmationEmailDialogEditTextCode"
+          android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+  </FrameLayout>
+</RelativeLayout>

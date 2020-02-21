@@ -1,0 +1,92 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ticketDialogFragmentRootPanel"
+    android:orientation="vertical" android:background="#ffffff">
+
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/ticketDialogFragmentBarCode"
+      android:scaleType="fitXY"
+      android:adjustViewBounds="true"
+      app:riv_corner_radius="5dp"
+      android:layout_weight="1"
+      android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+
+  <ScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fillViewport="true"
+      android:scrollbarStyle="outsideOverlay" android:layout_below="@+id/ticketDialogFragmentBarCode">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ticketDialogFragmentDataPanel"
+        tools:context="com.bil24.dialog.TicketDialogFragment" android:paddingLeft="10dp"
+        android:paddingRight="10dp" android:paddingBottom="10dp">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/ticketDialogFragmentQrCode"
+          android:scaleType="fitXY"
+          android:adjustViewBounds="true"
+          app:riv_corner_radius="5dp"
+          android:layout_weight="1"
+          android:layout_marginTop="15dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Title"
+          android:id="@+id/ticketDialogFragmentTextViewTitle"
+          android:textSize="@dimen/ticket_title"
+          android:textStyle="bold"
+          android:layout_below="@+id/ticketDialogFragmentQrCode" android:layout_marginTop="10dp"
+          android:layout_marginBottom="5dp"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Место"
+          android:id="@+id/ticketDialogFragmentTextViewEventSeat"
+          android:textSize="@dimen/ticket_2"
+          android:layout_below="@+id/ticketDialogFragmentTextViewTitle"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Мероприятие"
+          android:id="@+id/ticketDialogFragmentTextViewAction"
+          android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:textSize="@dimen/ticket_2"
+          android:layout_below="@+id/ticketDialogFragmentTextViewEventSeat"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Адрес"
+          android:id="@+id/ticketDialogFragmentTextViewAddress"
+          android:layout_below="@+id/ticketDialogFragmentTextViewAction"
+          android:textSize="@dimen/ticket_2"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Дата"
+          android:id="@+id/ticketDialogFragmentTextViewDate"
+          android:layout_below="@+id/ticketDialogFragmentTextViewAddress"
+          android:layout_marginTop="5dp" android:layout_marginBottom="10dp" android:textSize="@dimen/ticket_2"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Сумма"
+          android:id="@+id/ticketDialogFragmentTextViewSum" android:layout_below="@+id/ticketDialogFragmentTextViewDate"
+          android:textSize="@dimen/ticket_2"/>
+
+
+    </RelativeLayout>
+  </ScrollView>
+</RelativeLayout>
+

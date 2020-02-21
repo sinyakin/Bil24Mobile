@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fullscreen_content"
+                android:background="#000000"
+                android:fitsSystemWindows="true" android:gravity="center">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/toolbar"
+      android:theme="@style/ToolBarStyle"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+      android:elevation="4dp"
+      android:minHeight="?attr/actionBarSize"
+      android:transitionName="actionBar" android:layout_alignParentTop="true"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+
+    <uk.co.senab.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageActivityImageView" android:scaleType="fitCenter" android:layout_alignParentTop="true"/>
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/imageActivityImageViewProgressBar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/ColorsCircularProgressDrawableStyle"
+        app:pv_progressMode="indeterminate"
+        android:layout_centerInParent="true"/>
+  </RelativeLayout>
+
+</RelativeLayout>

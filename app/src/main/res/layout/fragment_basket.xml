@@ -1,0 +1,118 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/panel_background"
+        tools:context="com.bil24.fragments.BasketFragment" android:padding="10dp">
+
+    <com.bil24.myelement.MySwipeRefreshLayout
+        android:id="@+id/basketFragmentRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" android:layout_above="@+id/basketFragmentButtonPanel">
+
+        <ListView
+            android:id="@+id/basketFragmentListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:dividerHeight="10.0sp" android:padding="10dp"/>
+    </com.bil24.myelement.MySwipeRefreshLayout>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вы не зарезервировали ни одного билета"
+        android:id="@+id/basketFragmentTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="#db4a4a4a"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/basketFragmentButtonPanel"
+        android:layout_alignParentBottom="true" android:padding="10dp">
+
+        <EditText
+            android:id="@+id/basketFragmentPromoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Промокоды"
+            android:inputType="textPersonName"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/basket_place_text"
+            android:text="Сервисный сбор"
+            android:id="@+id/basketFragmentTextViewCharge"
+            android:layout_toLeftOf="@+id/basketFragmentTextViewChargeSum"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:layout_below="@+id/basketFragmentPromoEditText"
+        />
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 руб."
+            android:textSize="@dimen/basket_place_text"
+            android:id="@+id/basketFragmentTextViewChargeSum" android:layout_alignParentRight="true"
+            android:layout_below="@+id/basketFragmentPromoEditText"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/basket_place_text"
+            android:text="Стоимость билетов"
+            android:id="@+id/basketFragmentTextViewQuantity" android:singleLine="true"
+            android:layout_toLeftOf="@+id/basketFragmentTextViewSum" android:layout_alignParentLeft="true"
+            android:layout_below="@+id/basketFragmentTextViewCharge" android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 руб."
+            android:textSize="@dimen/basket_place_text"
+            android:id="@+id/basketFragmentTextViewSum" android:layout_alignParentRight="true"
+            android:layout_below="@+id/basketFragmentTextViewChargeSum" android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <com.rey.material.widget.Button
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/pay_order"
+          android:textColor="#FFFFFFFF"
+          android:textSize="@dimen/button_text_size"
+          android:drawableRight="@drawable/logo_vm"
+          android:gravity="center_vertical|center_horizontal"
+          android:layout_centerHorizontal="true"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+          style="@style/RaiseColorButtonRippleStyle"
+          android:id="@+id/basketFragmentButtonBuy"
+          android:layout_marginTop="10dp" android:padding="5dp" android:layout_below="@+id/basketFragmentTextViewQuantity"/>
+
+        <com.rey.material.widget.Button
+            android:id="@+id/basketFragmentButtonPromoCode"
+            style="@style/RaiseColorButtonRippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить промокод(ы)"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_below="@+id/basketFragmentTextViewQuantity"/>
+    </RelativeLayout>
+</RelativeLayout>

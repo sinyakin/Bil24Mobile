@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/panel_background"
+                tools:context="com.bil24.activity.CityActivity">
+
+  <com.rey.material.widget.TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/aboutCity"
+      android:id="@+id/cityActivityTextView"
+      android:layout_alignParentTop="true"
+      android:layout_margin="10dp"
+      android:textSize="@dimen/city_dialog_text1"/>
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" android:id="@+id/cityActivityLoadingPanel"
+      android:layout_marginTop="10dp"
+      android:layout_below="@+id/cityActivityTextView">
+  </com.bil24.myelement.MyLoadingPanel>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/cityActivityRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical"
+      android:layout_below="@+id/cityActivityTextView" android:layout_above="@+id/cityActivityButtonOk"/>
+
+  <com.rey.material.widget.Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Продолжить"
+      android:textColor="@color/toolbar"
+      style="@style/DefaultButtonStyle"
+      android:id="@+id/cityActivityButtonOk"
+      android:layout_margin="10dp"
+      android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

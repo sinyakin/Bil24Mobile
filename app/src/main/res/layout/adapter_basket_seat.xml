@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+    <com.rey.material.widget.Button
+        android:id="@+id/basketSeatButtonUnReservePlace"
+        style="@style/RaiseColorButtonUnReserveRippleStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="x"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textColor="#FFFFFFFF"/>
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/basketSeatName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/basketSeatTextViewPrice"
+        android:layout_toRightOf="@+id/basketSeatButtonUnReservePlace"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/basket_place_text"
+        tools:text="Name"/>
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/basketSeatTextViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/basket_place_text"
+        tools:text="Цена"/>
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/basketSeatTextViewWithDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/basketSeatTextViewPrice"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="@dimen/basket_place_text"
+        tools:text="Цена"/>
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/basketSeatTextViewDiscountReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/basketSeatTextViewWithDiscount"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="@dimen/basket_place_text"
+        tools:text="Discount"/>
+</RelativeLayout>

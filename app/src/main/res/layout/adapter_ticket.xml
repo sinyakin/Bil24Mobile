@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:padding="5dp">
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/back"
+      android:tag="back"
+      android:orientation="horizontal"
+      android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+      android:layout_alignTop="@+id/ticketAdapterTicketPanel"
+      android:layout_alignBottom="@+id/ticketAdapterTicketPanel">
+
+    <com.rey.material.widget.Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/ticketAdapterButtonHide"
+        android:textColor="#FFFFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        style="@style/RaiseColorButton2RippleStyle"
+        android:textSize="@dimen/button_text_size"
+        android:text="Скрыть билет" android:padding="10dp" android:visibility="gone"/>
+
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/ticketAdapterTicketPanel"
+      android:tag="ticketAdapterTicketPanel"
+      android:background="#ffffff"
+      android:layout_alignParentTop="true" android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ticketAdapterMainPanel"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1" android:layout_marginRight="15dp">
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата"
+            android:id="@+id/ticketAdapterTextViewDate" android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" android:textSize="@dimen/ticket_adapter1"
+            android:textColor="@color/toolbar" android:textStyle="bold"/>
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Место"
+            android:id="@+id/ticketAdapterTextViewEventSeat"
+            android:layout_marginTop="5dp" android:textSize="@dimen/ticket_adapter2"
+            android:layout_alignParentLeft="true"
+            android:gravity="left|bottom"
+            android:layout_below="@+id/ticketAdapterTextViewDate"/>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ticketAdapterBarCode"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:riv_corner_radius="5dp" android:layout_gravity="center_vertical"/>
+
+          <com.rey.material.widget.TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Номер"
+              android:id="@+id/ticketAdapterTextViewBarNumber"
+              android:layout_marginTop="5dp" android:textSize="@dimen/ticket_adapter2"
+              android:layout_below="@+id/ticketAdapterBarCode"/>
+
+      </RelativeLayout>
+    </LinearLayout>
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Место"
+        android:id="@+id/ticketAdapterTextViewEventAddress"
+        android:layout_marginTop="5dp" android:textSize="@dimen/ticket_adapter2"
+        android:layout_below="@+id/ticketAdapterMainPanel"/>
+  </RelativeLayout>
+
+  <com.rey.material.widget.Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Показать билет"
+      android:textColor="#FFFFFFFF"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+      style="@style/RaiseColorButtonRippleStyle"
+      android:textSize="@dimen/button_text_size"
+      android:id="@+id/ticketAdapterButtonShow" android:layout_centerInParent="true" android:layout_margin="5dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="wrap_content"
+    android:background="#EFEFEB"
+    tools:context="com.bil24.dialog.OrderInfoDialogFragment" android:padding="10dp">
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:id="@+id/orderInfoDialogLoadPagePanel"
+      android:layout_marginTop="10dp" android:layout_alignParentTop="true">
+  </com.bil24.myelement.MyLoadingPanel>
+
+  <GridView
+      android:id="@+id/orderInfoDialogGridView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:verticalSpacing="10dp"
+      android:scrollbarStyle="outsideInset"
+      android:listSelector="@android:color/transparent"
+      android:numColumns="1"
+      />
+
+</RelativeLayout>

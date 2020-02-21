@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/venueCityPassFragmentContentPanel"
+                android:tag="big">
+
+  <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/venueCityPassFragmentMainPanel"
+        android:padding="@dimen/place_padding"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:background="@drawable/bg_item"
+        android:weightSum="100" android:gravity="center_vertical">
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="50">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:riv_corner_radius="5dp"
+            android:id="@+id/venueCityPassFragmentVenuePoster" android:src="@drawable/poster1"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text2"
+            android:text="Показать на карте"
+            android:padding="@dimen/place_padding"
+            android:id="@+id/venueCityPassFragmentTvMap"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
+      </RelativeLayout>
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="50" android:layout_marginLeft="8dp" android:layout_gravity="top">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/venueCityPassFragmentWebView" android:layout_centerInParent="true"/>
+      </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text2"
+        android:text="HTML"
+        android:padding="@dimen/place_padding"
+        android:id="@+id/venueCityPassFragmentDescription"
+        android:layout_marginTop="10dp"/>
+  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mecDialogFragmentRootPanel"
+    android:orientation="vertical" android:background="#ffffff">
+
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/mecDialogFragmentBarCode"
+      android:scaleType="fitXY"
+      android:adjustViewBounds="true"
+      app:riv_corner_radius="5dp"
+      android:layout_weight="1"
+      android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+
+  <ScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fillViewport="true"
+      android:scrollbarStyle="outsideOverlay" android:layout_below="@+id/mecDialogFragmentBarCode">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" android:paddingBottom="10dp">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/mecDialogFragmentQrCode"
+          android:scaleType="fitXY"
+          android:adjustViewBounds="true"
+          app:riv_corner_radius="5dp"
+          android:layout_weight="1"
+          android:layout_marginTop="15dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Title"
+          android:id="@+id/mecDialogFragmentTextViewTitle"
+          android:textSize="@dimen/ticket_title"
+          android:textStyle="bold"
+          android:layout_below="@+id/mecDialogFragmentQrCode" android:layout_marginTop="10dp"
+          android:layout_marginBottom="5dp"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Место"
+          android:id="@+id/mecDialogFragmentTextViewEventSeat"
+          android:textSize="@dimen/ticket_2"
+          android:layout_below="@+id/mecDialogFragmentTextViewTitle"/>
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Мероприятие"
+          android:id="@+id/mecDialogFragmentTextViewAction"
+          android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:textSize="@dimen/ticket_2"
+          android:layout_below="@+id/mecDialogFragmentTextViewEventSeat"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Адрес"
+          android:id="@+id/mecDialogFragmentTextViewAddress"
+          android:layout_below="@+id/mecDialogFragmentTextViewAction"
+          android:textSize="@dimen/ticket_2" android:layout_marginBottom="5dp"/>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Сумма"
+          android:id="@+id/mecDialogFragmentTextViewSum"
+          android:textSize="@dimen/ticket_2" android:layout_below="@+id/mecDialogFragmentTextViewAddress"/>
+    </RelativeLayout>
+  </ScrollView>
+</RelativeLayout>
+

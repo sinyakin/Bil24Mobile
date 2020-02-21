@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Билеты</string>
+  <string name="action_settings">Настройки</string>
+
+  <string name="drawer_item_basket">Корзина</string>
+  <string name="drawer_item_my_orders">Мои заказы</string>
+  <string name="drawer_item_my_tickets">Мои билеты</string>
+  <string name="drawer_item_my_cards">Мои карты</string>
+  <string name="drawer_item_my_promo_codes">Мои промокоды</string>
+  <string name="drawer_item_news">Новости</string>
+  <string name="drawer_item_wy_fly">Wi-Fly</string>
+  <string name="drawer_item_events">События</string>
+  <string name="drawer_item_setting">Настройки</string>
+  <string name="drawer_item_agreement">Соглашение</string>
+
+  <string name="drawer_item_settings">Settings</string>
+  <string name="title_activity_splash_screen">SplashScreen</string>
+
+  <string name="hello_world">Hello world!</string>
+
+  <string name="empty_action">нет</string>
+  <string name="empty">Пусто</string>
+  <string name="empty_news">новостей нет</string>
+  <string name="empty_ticket">билетов нет</string>
+  <string name="empty_card">карт нет</string>
+  <string name="empty_promo_codes">промокодов нет</string>
+  <string name="order_empty">заказов нет</string>
+
+  <string name="err_net">Отсутствует интернет-соединение.</string>
+  <string name="err_net_server">Ведутся технические работы. Приносим свои извинения.</string>
+  <string name="err_net_auth">Перезапустите приложение для обновления.</string>
+  <string name="update_app">ОБНОВЛЕНИЕ ПРИЛОЖЕНИЯ</string>
+  <string name="update">Обновить</string>
+  <string name="title_activity_action_inf">ActionInfActivity</string>
+  <string name="duration">Длительность:</string>
+  <string name="category_info">Входные билеты без мест:</string>
+  <string name="mec_info">Вид карты:</string>
+  <string name="eticket">Вход на сеанс возможен по Мобильному электронному билету (МЭБ), предъявляемого с экрана
+    мобильного приложения BIL24 (раздел Мои билеты)
+  </string>
+  <string name="name">Название</string>
+  <string name="description">Описание загружается…</string>
+  <string name="seats_list">Список мест:</string>
+  <string name="sectors_list">Список секторов:</string>
+  <string name="loading_sectors">Загрузка секторов</string>
+  <string name="loading_seats">Загрузка мест</string>
+
+  <string name="select_row">Выбрано мест: 0</string>
+  <string name="aboutCity">Выберите город, события в котором Вы хотите посещать. Изменить выбор можно через пункт меню
+    "Настройки"
+  </string>
+  <string name="aboutKdp">Чтобы зарезервировать места введите Код доступа к представлению (КДП)</string>
+  <string name="aboutFullName">Фамилия и имя зрителя, который пойдет на сеанс:</string>
+  <string name="aboutConfirmEmail1">Введите адрес эл. почты</string>
+  <string name="aboutConfirmEmail2">Введите код подтверждения, отправленный на почту</string>
+  <string name="city">Город:</string>
+  <string name="save">Сохранить</string>
+
+  <string name="dialog_title_print">Печать чека</string>
+
+  <string name="title_activity_alfa">Оплата с Карты</string>
+  <string name="title_activity_seating_plan">Схема зала</string>
+  <string name="pay_order">Оплатить заказ</string>
+  <string name="select_place">Выбрать места на схеме</string>
+  <string name="reservation">Оформить входные билеты</string>
+  <string name="get_mec">Получить карту</string>
+  <string name="osp">Скидки и преференции</string>
+  <string name="category_limit_info">Показать лимиты</string>
+  <string name="ticket_activity_info">Чтобы скрыть билет, сдвиньте его влево. Чтобы отправить билет по почте,
+    сдвиньте вправо, чтобы открыть МЭБ - нажмите на билет.
+  </string>
+  <string name="action_fragment_info">Обновите раздел, если только что приобретенных билетов нет</string>
+  <string name="mecs_fragment_info">Обновите раздел, если только что приобретенных карт нет</string>
+
+  <string name="dialog_fragment_info">Выберите город, место проведения и дату, начиная с которой вы хотите видеть
+    события
+  </string>
+  <string name="basket_adapter_delete">Удалить</string>
+  <string name="fid">Ваш FID: %s</string>
+  <string name="change_fid">Изменить FID</string>
+  <string name="unlocking">Разблокировка\nприложения</string>
+  <string name="number1">1</string>
+  <string name="number2">2</string>
+  <string name="number3">3</string>
+  <string name="number4">4</string>
+  <string name="number5">5</string>
+  <string name="number6">6</string>
+  <string name="number7">7</string>
+  <string name="number8">8</string>
+  <string name="number9">9</string>
+  <string name="number0">0</string>
+  <string name="letter_delete"><![CDATA[<]]></string>
+  <string name="fid_change">Чтобы изменить FID приложения:</string>
+  <string name="fid_enter">введите FID</string>
+  <string name="token_enter">введите token</string>
+  <string name="showing_service_info">Показывать служебную информацию</string>
+  <string name="test_zone">Тестовая</string>
+  <string name="real_zone">Реальная</string>
+  <string name="default_fid">Default FID</string>
+
+  <string name="title_activity_city">CityActivity</string>
+  <string name="dummy_button">Dummy Button</string>
+  <string name="dummy_content">DUMMY\nCONTENT</string>
+  <string name="dialog_cancel_button">Отмена</string>
+  <string name="dialog_confirmation_email_button_send_code">Отправить код</string>
+  <string name="dialog_confirmation_email_button_check">Проверить</string>
+  <string name="loading_panel_text_view">Загрузка данных</string>
+  <string name="dialog_button_ok">ок</string>
+  <string name="dialog_change_button">изменить</string>
+  <string name="dialog_rmk_default_fid_button">default fid</string>
+</resources>

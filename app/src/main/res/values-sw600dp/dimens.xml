@@ -1,0 +1,87 @@
+<resources>
+
+  <dimen name="grid_view_item_margin">10dp</dimen>
+  <dimen name="bil24_button_padding">10dp</dimen>
+  <dimen name="dialog_width">350dp</dimen>
+  <!--<dimen name="place_h">120dp</dimen>-->
+  <!--<dimen name="place_title">30sp</dimen>-->
+  <dimen name="place_padding">9dp</dimen>
+
+  <dimen name="action_title">19sp</dimen>
+  <dimen name="action_seat_name">16sp</dimen>
+
+  <!--<dimen name="dp_dayTextSize">18sp</dimen>-->
+
+  <dimen name="date_of_week">21sp</dimen>
+  <dimen name="date_of_month">50sp</dimen>
+  <dimen name="month">25sp</dimen>
+  <dimen name="year">25sp</dimen>
+
+  <dimen name="button_text_size">17sp</dimen>
+  <dimen name="my_loading_text_size">20sp</dimen>
+
+  <dimen name="select_action_1">25sp</dimen>
+  <dimen name="select_action_2">19sp</dimen>
+
+  <dimen name="e_ticket_text">16sp</dimen>
+
+  <dimen name="basket_padding">30sp</dimen>
+  <dimen name="basket_place_text">19sp</dimen>
+
+  <dimen name="order_title">21sp</dimen>
+  <dimen name="order_text">19sp</dimen>
+
+  <!--<dimen name="ticket_1">27sp</dimen>-->
+  <dimen name="ticket_2">22sp</dimen>
+
+  <dimen name="ticket_adapter1">22sp</dimen>
+  <dimen name="ticket_adapter2">19sp</dimen>
+  <!--<dimen name="ticket_adapter_image">100dp</dimen>-->
+
+  <dimen name="promo_codes_adapter_header">22sp</dimen>
+  <dimen name="promo_codes_adapter_text">19sp</dimen>
+  <dimen name="promo_codes_adapter_discount">35sp</dimen>
+  <dimen name="promo_codes_adapter_text1">15sp</dimen>
+
+  <dimen name="order_info_m_top1">5dp</dimen>
+  <dimen name="order_info_m_top2">15dp</dimen>
+  <dimen name="order_info_m_top3">5dp</dimen>
+
+  <integer name="action_ticket_count">2</integer>
+
+  <dimen name="action_ticket_name">16sp</dimen>
+  <dimen name="action_ticket_date">14sp</dimen>
+
+  <dimen name="tickets_qr">22sp</dimen>
+
+  <dimen name="city_dialog_text1">20sp</dimen>
+
+  <dimen name="spinner_text">20sp</dimen>
+
+  <!--<dimen name="title_">18sp</dimen>-->
+
+  <dimen name="material_drawer_item_primary_text">18sp</dimen>
+
+  <dimen name="abc_text_size_button_material">18sp</dimen>
+  <dimen name="abc_text_size_body_1_material">18sp</dimen>
+
+  <dimen name="text_size_small">15sp</dimen>
+
+  <dimen name="ticket_title">22sp</dimen>
+
+  <dimen name="text_default">22sp</dimen>
+
+  <dimen name="badge_actionbar_size">18dp</dimen>
+  <dimen name="text_action_bar">11sp</dimen>
+  <dimen name="text_action_bar_info">12sp</dimen>
+
+  <dimen name="text1">19sp</dimen>
+  <dimen name="text2">17sp</dimen>
+
+  <dimen name="auth_text_activity">35sp</dimen>
+  <dimen name="auth_text_height">60dp</dimen>
+
+  <dimen name="drawer_toggle_margin">18dp</dimen>
+  <dimen name="activity_horizontal_margin">64dp</dimen>
+
+</resources>

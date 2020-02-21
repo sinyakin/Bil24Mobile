@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="MainActivityTheme" parent="MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus">
+    <item name="colorPrimary">@android:color/white</item>
+    <item name="colorPrimaryDark">@color/toolbar_hard</item>
+    <item name="colorAccent">@color/toolbar_hard</item>
+    <!-- CAB :D -->
+    <item name="windowActionModeOverlay">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+  <FrameLayout
+      android:layout_width="300dp"
+      android:layout_height="wrap_content">
+
+    <RelativeLayout android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/dialogRmkTextView"
+          android:layout_alignParentTop="true"
+          style="?android:attr/textAppearanceMedium"
+          android:text="Смена FID" android:textStyle="bold" android:paddingBottom="15dp">
+      </TextView>
+
+      <com.rey.material.widget.TextView
+          android:id="@+id/dialogRmkFidTVInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/fid"
+          style="?android:attr/textAppearanceMedium"
+          android:layout_below="@+id/dialogRmkTextView"/>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/dialogRmkFidPanel"
+          android:layout_below="@+id/dialogRmkFidTVInfo">
+
+        <com.rey.material.widget.TextView
+            android:id="@+id/dialogRmkFidTVInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fid_change"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="10dp" android:layout_alignParentTop="true"/>
+
+
+        <EditText
+            android:id="@+id/dialogRmkFidET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fid_enter"
+            android:layout_below="@+id/dialogRmkFidTVInfo1" android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/dialogRmkFidETToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/token_enter" android:layout_below="@+id/dialogRmkFidET"/>
+
+        <com.rey.material.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_cancel_button"
+            android:padding="5dp"
+            android:textColor="@color/toolbar"
+            style="@style/DefaultButtonStyle"
+            android:id="@+id/rmkDialogButtonCancel" android:layout_marginTop="10dp"
+            android:layout_alignBaseline="@+id/rmkDialogButtonOk" android:layout_toLeftOf="@+id/rmkDialogButtonOk"/>
+
+        <com.rey.material.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_change_button"
+            android:padding="5dp"
+            android:textColor="@color/toolbar"
+            style="@style/DefaultButtonStyle"
+            android:id="@+id/rmkDialogButtonOk"
+            android:layout_marginTop="10dp" android:layout_below="@+id/dialogRmkFidETToken"
+            android:layout_alignParentRight="true"/>
+      </RelativeLayout>
+
+      <com.rey.material.widget.Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/dialog_rmk_default_fid_button"
+          android:padding="5dp"
+          android:textColor="@color/toolbar"
+          style="@style/DefaultButtonStyle"
+          android:id="@+id/rmkDialogButtonDefault" android:layout_marginTop="10dp"
+          android:layout_below="@+id/dialogRmkFidTVInfo"
+          android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+  </FrameLayout>
+</ScrollView>

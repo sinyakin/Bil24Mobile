@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:clickable="true"
+                style="@android:style/Widget.ActionButton">
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:id="@+id/menuIV" android:layout_alignParentLeft="true"/>
+
+  <TextView
+      android:id="@+id/menuCounter"
+      android:layout_width="@dimen/badge_actionbar_size"
+      android:layout_height="@dimen/badge_actionbar_size"
+      android:gravity="center"
+      android:background="@drawable/actionbar_badge"
+      android:text=""
+      android:textSize="@dimen/text_action_bar"
+      android:textColor="#000000"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="10dp" android:layout_alignParentRight="false"
+      android:layout_alignRight="@+id/menuIV"/>
+
+  <TextView
+      android:id="@+id/menuText"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:text="мои\nбилеты"
+      android:textSize="@dimen/text_action_bar_info"
+      android:textColor="#ffffff"
+      android:gravity="center_vertical" android:layout_toRightOf="@+id/menuIV" android:layout_marginLeft="6dp"/>
+
+</RelativeLayout>

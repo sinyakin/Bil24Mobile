@@ -1,0 +1,19 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/panel_background"
+    tools:context="com.bil24.fragments.WiFlyFragment">
+
+  <com.bil24.myelement.MyLoadingPanel
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" android:id="@+id/wiflyFragmentLoadingPanel"
+      android:layout_marginTop="10dp" android:visibility="gone">
+  </com.bil24.myelement.MyLoadingPanel>
+
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/wiflyFragmentWebView"/>
+</RelativeLayout>

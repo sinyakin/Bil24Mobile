@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="6dp"
+                                    android:shape="ring">
+
+  <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@drawable/bg_item"
+                  android:layout_margin="@dimen/place_padding" android:padding="@dimen/basket_padding">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/basketAdapterTopPanel">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/basketAdapterPoster"
+          android:scaleType="fitXY"
+          android:adjustViewBounds="true"
+          app:riv_corner_radius="5dp"
+          android:layout_weight="1"
+          android:src="@drawable/poster2"
+          android:layout_marginRight="5dp"/>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1" android:layout_marginLeft="5dp" android:gravity="center">
+
+        <com.rey.material.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/basket_adapter_delete"
+            android:textColor="#FFFFFFFF"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="@style/RaiseColorButtonUnReserveRippleStyle"
+            android:id="@+id/basketAdapterButtonUnReserve"
+            android:textSize="@dimen/button_text_size"
+            android:padding="15dp" android:layout_centerHorizontal="true"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="день"
+            android:id="@+id/basketVenueTextViewDay"
+            android:textSize="@dimen/select_action_1" android:gravity="center"
+            android:layout_below="@+id/basketAdapterButtonUnReserve" android:layout_marginTop="20dp"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="время"
+            android:id="@+id/basketVenueTextViewTime"
+            android:textSize="@dimen/select_action_1" android:gravity="center"
+            android:layout_below="@+id/basketVenueTextViewDay"
+        />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/name"
+        android:id="@+id/basketVenueTextViewFullName"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/select_action_1" android:gravity="center"
+        android:layout_below="@+id/basketAdapterTopPanel"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/name"
+        android:id="@+id/basketVenueTextViewVenueName"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/basketVenueTextViewFullName"
+        android:textSize="@dimen/select_action_1" android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/basketVenueListViewSeat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalSpacing="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/basketVenueTextViewVenueName"/>
+  </RelativeLayout>
+</android.support.v7.widget.CardView>

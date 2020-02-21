@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/dialogPrintHeaderTextView"
+      android:layout_alignParentTop="true"
+      style="?android:attr/textAppearanceMedium"
+      android:text="@string/dialog_title_print" android:textStyle="bold" android:paddingBottom="15dp">
+  </TextView>
+
+  <FrameLayout
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/dialogPrintRootPanel"
+      android:layout_marginTop="15dp"
+      android:layout_below="@+id/dialogHeaderTextView">
+
+    <com.bil24.myelement.MyLoadingPanel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogPrintLoadingPanel"
+        android:layout_marginTop="10dp">
+    </com.bil24.myelement.MyLoadingPanel>
+  </FrameLayout>
+</RelativeLayout>

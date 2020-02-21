@@ -1,0 +1,115 @@
+<com.bil24.myelement.MySwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eventSeatMecRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fillViewport="true"
+      android:scrollbarStyle="outsideOverlay"
+      android:id="@+id/eventSeatMecScrollView">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/action_bg"
+          android:layout_margin="@dimen/place_padding"
+          tools:context="com.bil24.fragments.action.SeanceFragment" android:padding="10dp"
+          android:id="@+id/eventSeatMecMainPanel">
+
+        <com.bil24.myelement.MySpinner
+            android:id="@+id/eventSeatMecSpinnerVenue"
+            style="@style/Material.Widget.Spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventSeatMecImageViewPoster2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:riv_corner_radius="5dp"
+            android:src="@drawable/poster2"
+            android:layout_marginRight="5dp" android:layout_below="@+id/eventSeatMecSpinnerVenue"
+            android:layout_centerHorizontal="true"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:id="@+id/eventSeatMecTextViewFullName"
+            android:layout_centerHorizontal="true" android:layout_marginTop="15dp"
+            android:textSize="@dimen/select_action_1" android:gravity="center"
+            android:layout_below="@+id/eventSeatMecImageViewPoster2"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mec_info"
+            android:id="@+id/eventSeatMecTextViewCategoryInfo"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/select_action_2"
+            android:layout_marginBottom="5dp" android:layout_below="@+id/eventSeatMecTextViewFullName"
+            android:layout_marginTop="10dp"/>
+        <com.bil24.myelement.MySpinner
+              android:id="@+id/eventSeatMecCategoryPriceSpinner"
+              style="@style/Material.Widget.Spinner"
+              android:layout_width="fill_parent"
+              android:layout_height="50dp"
+              app:rd_style="@style/Material.Drawable.Ripple.Wave"
+              android:layout_centerHorizontal="true" android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_below="@+id/eventSeatMecTextViewCategoryInfo" android:layout_marginBottom="13dp"/>
+        <com.rey.material.widget.Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_mec"
+            android:textColor="#FFFFFFFF"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="@style/RaiseColorButtonRippleStyle"
+            android:id="@+id/eventSeatMecButtonReserve"
+            android:padding="5dp"
+            android:textSize="@dimen/button_text_size"
+            android:layout_below="@+id/eventSeatMecCategoryPriceSpinner"/>
+
+        <com.rey.material.widget.Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/osp"
+            android:textColor="#FFFFFFFF"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="@style/RaiseColorButtonRippleStyle"
+            android:id="@+id/eventSeatMecButtonCityPass"
+            android:padding="5dp"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_below="@+id/eventSeatMecButtonReserve"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:id="@+id/eventSeatMecTextViewDescription"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/select_action_2" android:layout_below="@+id/eventSeatMecButtonCityPass"/>
+
+      </RelativeLayout>
+    </FrameLayout>
+  </ScrollView>
+
+</com.bil24.myelement.MySwipeRefreshLayout>

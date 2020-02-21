@@ -1,0 +1,86 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <FrameLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <com.rey.material.widget.TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Title"
+        android:id="@+id/filterDialogFragmentTextViewTitle" android:background="#ffffff"
+        android:textSize="@dimen/ticket_title" android:paddingTop="15dp" android:paddingBottom="15dp"
+        android:paddingLeft="10dp" android:paddingRight="10dp" android:textStyle="bold"/>
+
+    <com.bil24.myelement.MyLoadingPanel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/filterDialogFragmentLoadingPanel"
+        android:layout_marginTop="10dp">
+    </com.bil24.myelement.MyLoadingPanel>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:paddingLeft="10dp"
+                  android:paddingRight="10dp" android:paddingBottom="10dp"
+                  android:id="@+id/filterDialogFragmentDataPanel">
+
+      <com.bil24.myelement.MySpinner
+          android:id="@+id/filterDialogFragmentCitySpinner"
+          style="@style/Material.Widget.Spinner"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          app:rd_style="@style/Material.Drawable.Ripple.Wave"
+          android:layout_marginTop="10dp"/>
+
+      <com.bil24.myelement.MySpinner
+          android:id="@+id/filterDialogFragmentKindSpinner"
+          style="@style/Material.Widget.Spinner"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          app:rd_style="@style/Material.Drawable.Ripple.Wave"
+          android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+
+      <com.bil24.myelement.MySpinner
+          android:id="@+id/filterDialogFragmentVenueSpinner"
+          style="@style/Material.Widget.Spinner"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          app:rd_style="@style/Material.Drawable.Ripple.Wave"
+          android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/date_bg"
+          android:id="@+id/filterDialogFragmentDatePanel"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="10dp" android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/filterDialogFragmentTextViewDate"
+            android:textSize="@dimen/spinner_text"
+            android:gravity="center" android:textColor="@color/date_text"
+        />
+      </RelativeLayout>
+
+      <com.rey.material.widget.TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_size_small"
+          android:text="@string/dialog_fragment_info"
+          android:id="@+id/filterDialogFragmentTextView3" android:textColor="#75000000"
+          android:gravity="center_horizontal" android:padding="15dp"/>
+
+    </LinearLayout>
+  </FrameLayout>
+</LinearLayout>
+

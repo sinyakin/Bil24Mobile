@@ -1,0 +1,84 @@
+<resources>
+  <!--TODO не знаю для чего написал-->
+  <color name="black_overlay">#66000000</color>
+
+  <color name="toolbar">#ea014b8f</color>
+  <color name="toolbar_lite">#ea0260b7</color>
+  <color name="toolbar_hard">#ea00407b</color>
+  <color name="panel_background">#EFEFEB</color>
+
+  <color name="selectable_item_color_clicked">#38000000</color>
+
+  <!-- overwrite the selected colors because the primary color is to dark -->
+  <!-- 383C4A-->
+  <color name="material_drawer_selected">@color/panel_background</color>
+  <color name="material_drawer_selected_text">#383C4A</color>
+  <color name="material_drawer_background">#383C4A</color>
+
+  <color name="material_drawer_icons">#FFF</color>
+  <color name="material_drawer_primary_text">#ffffffff</color>
+  <color name="material_drawer_primary_icon">#ffffffff</color>
+  <color name="material_drawer_secondary_text">#ffffffff</color>
+  <color name="material_drawer_hint_text">#ffffffff</color>
+  <color name="material_drawer_divider">#ff868686</color>
+
+  <color name="material_date_picker">#03A9F4</color>
+
+  <color name="setting_bg">@android:color/transparent</color>
+  <color name="setting_bg_press">#ffededed</color>
+  <color name="bg">#f9f9f9</color>
+  <color name="bg_border">#2431291f</color>
+  <color name="bg_press">#ffededed</color>
+
+  <color name="action_top_bg">#EFEFEB</color>
+  <color name="action_top_bg_press">#ffffff</color>
+
+  <color name="price">#ff797f42</color>
+  <color name="no_activate_promo_code">#d6d1cc</color>
+
+  <color name="button1">#6897C1</color>
+  <color name="button1_border">#ff547ea7</color>
+  <color name="button1_press">#ff75abd7</color>
+
+  <color name="button2">#fff93f25</color>
+  <color name="button2_border">#ffd63824</color>
+  <color name="button2_press">#ffdb3823</color>
+
+  <color name="button_disable">#ffa4a4ab</color>
+
+  <color name="text">#db4a4a4a</color>
+
+  <color name="date_text">#ffffff</color>
+  <color name="date_bg">#03A9F4</color>
+  <color name="date_bg_border">#ff039de3</color>
+  <color name="date_bg_press">#ff039be0</color>
+  <color name="date_bg_disable">#ffa4a4ab</color>
+  <color name="date_bg_border__disable">#ff88888e</color>
+
+  <color name="un_reserve_bg">#fff45030</color>
+  <color name="un_reserve_bg_border">#ffdd4a2e</color>
+  <color name="un_reserve_bg_press">#ffdd4a2e</color>
+  <color name="un_reserve_bg_disable">#ffa4a4ab</color>
+  <color name="un_reserve_bg_border__disable">#ff88888e</color>
+
+  <color name="print_check_bg">#f7f7f7</color>
+  <color name="print_check_bg_border">#a4a4a4</color>
+  <color name="print_check_bg_press">#dcdcdc</color>
+  <color name="print_check_bg_disable">#ffa4a4ab</color>
+  <color name="print_check_bg_border__disable">#ff88888e</color>
+
+  <color name="day_of_week_bg">#ff039be0</color>
+
+  <array name="progress_colors">
+    <item>#FF3F8AF8</item>
+    <item>#FFD8433C</item>
+    <item>#FFF2AF3A</item>
+    <item>#FF279B5E</item>
+  </array>
+
+  <color name="basket_sum">#ff039be0</color>
+
+  <color name="header_action_ticket">#ab31291f</color>
+
+  <color name="black_p50">#7f000000</color>
+</resources>

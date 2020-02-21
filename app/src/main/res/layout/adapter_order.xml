@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="6dp"
+                                    android:shape="ring">
+
+  <RelativeLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/orderAdapterMainPanel"
+                  android:clickable="true"
+                  android:background="@drawable/bg_item"
+                  android:padding="10dp">
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заказ "
+        android:id="@+id/orderAdapterNumber" android:layout_alignParentTop="true" android:layout_marginBottom="3dp"
+        android:textSize="@dimen/order_title"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Создан: "
+        android:id="@+id/orderAdapterDate" android:layout_below="@+id/orderAdapterNumber"
+        android:layout_marginTop="@dimen/order_spacing" android:layout_marginBottom="@dimen/order_spacing"
+        android:textSize="@dimen/order_text"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Билетов: "
+        android:id="@+id/orderAdapterTickets" android:layout_below="@+id/orderAdapterDate"
+        android:textSize="@dimen/order_text"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Скидка: "
+        android:id="@+id/orderAdapterDiscount" android:layout_below="@+id/orderAdapterTickets"
+        android:layout_marginTop="@dimen/order_spacing"
+        android:textSize="@dimen/order_text"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сервисный сбор: "
+        android:id="@+id/orderAdapterCharge" android:layout_below="@+id/orderAdapterDiscount"
+        android:textSize="@dimen/order_text" android:layout_marginTop="@dimen/order_spacing"/>
+
+    <com.rey.material.widget.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сумма: "
+        android:id="@+id/orderAdapterSum" android:layout_below="@+id/orderAdapterCharge"
+        android:layout_marginTop="@dimen/order_spacing"
+        android:textSize="@dimen/order_title"
+        android:gravity="center"
+    />
+
+    <com.rey.material.widget.Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Удалить"
+        android:textColor="#FFFFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        style="@style/RaiseColorButtonUnReserveRippleStyle"
+        android:id="@+id/orderAdapterButtonDelete"
+        android:textSize="@dimen/button_text_size"
+        android:padding="15dp" android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_receipt_black_24dp"
+        android:id="@+id/orderAdapterButtonPrint"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/orderAdapterButtonDelete"/>
+
+    <com.rey.material.widget.Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Оплатить заказ"
+        android:textColor="#FFFFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        style="@style/RaiseColorButtonRippleStyle"
+        android:id="@+id/orderAdapterButtonBuy"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginTop="10dp" android:padding="5dp"
+        android:layout_below="@+id/orderAdapterSum"/>
+  </RelativeLayout>
+</android.support.v7.widget.CardView>

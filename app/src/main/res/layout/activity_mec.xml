@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".activity.MECsActivity">
+
+  <ListView
+      android:id="@+id/mecActivityListView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:divider="@android:color/transparent"
+      android:scrollbarStyle="outsideOverlay"
+      android:dividerHeight="10.0sp"
+      android:padding="10dp"
+      android:layout_above="@+id/mecActivityButtonShowAllQrCode"
+      android:layout_alignParentTop="true"/>
+
+  <com.rey.material.widget.Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Показать карты как QR-коды"
+      android:textColor="#FFFFFFFF"
+      android:layout_centerHorizontal="true"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+      style="@style/RaiseColorButtonRippleStyle"
+      android:textSize="@dimen/button_text_size"
+      android:id="@+id/mecActivityButtonShowAllQrCode"
+      android:padding="5dp" android:layout_alignParentBottom="true"
+      android:layout_margin="10dp"/>
+
+</RelativeLayout>

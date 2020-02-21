@@ -1,0 +1,274 @@
+<com.bil24.myelement.MySwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eventSeatRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fillViewport="true"
+      android:scrollbarStyle="outsideOverlay"
+      android:id="@+id/eventSeatScrollView">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/action_bg"
+          android:layout_margin="@dimen/place_padding"
+          tools:context="com.bil24.fragments.action.SeanceFragment" android:padding="10dp"
+          android:id="@+id/eventSeatMainPanel">
+
+        <com.bil24.myelement.MySpinner
+            android:id="@+id/eventSeatSpinnerVenue"
+            style="@style/Material.Widget.Spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/eventSeatHeader" android:layout_below="@+id/eventSeatSpinnerVenue">
+
+          <com.makeramen.roundedimageview.RoundedImageView
+              android:layout_width="70dp"
+              android:layout_height="wrap_content"
+              android:id="@+id/eventSeatImageViewPoster2"
+              android:scaleType="fitXY"
+              android:adjustViewBounds="true"
+              app:riv_corner_radius="5dp"
+              android:src="@drawable/poster2"
+              android:layout_marginRight="5dp"/>
+
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:layout_gravity="center"
+              android:id="@+id/eventSeatDatePanel" android:layout_toRightOf="@+id/eventSeatImageViewPoster2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/date_bg"
+                android:id="@+id/eventSeatDayPanel" android:layout_alignParentTop="true">
+              <TextView
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/day_of_week_bg"
+                  tools:text="день недели"
+                  android:id="@+id/eventSeatTextViewDayOfWeek" android:layout_alignParentTop="true"
+                  android:gravity="center" android:padding="5dp" android:textColor="@color/date_text"
+                  android:textSize="@dimen/date_of_week"/>
+              <TextView
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  tools:text="дата"
+                  android:id="@+id/eventSeatTextViewDayOfMonth" android:layout_marginTop="1dp"
+                  android:layout_below="@+id/eventSeatTextViewDayOfWeek" android:gravity="center"
+                  android:textSize="@dimen/date_of_month"
+                  android:textColor="@color/date_text"/>
+              <TextView
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  tools:text="месяц"
+                  android:id="@+id/eventSeatTextViewMonth"
+                  android:textSize="@dimen/month"
+                  android:gravity="center"
+                  android:layout_marginTop="1dp" android:textColor="@color/date_text"
+                  android:layout_below="@+id/eventSeatTextViewDayOfMonth"/>
+              <TextView
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  tools:text="год"
+                  android:id="@+id/eventSeatTextViewYear"
+                  android:textSize="@dimen/year"
+                  android:layout_marginTop="4dp"
+                  android:gravity="center" android:textColor="@color/date_text"
+                  android:paddingBottom="5dp"
+                  android:layout_below="@+id/eventSeatTextViewMonth"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_below="@+id/eventSeatDayPanel"
+                android:id="@+id/eventSeatTimeNewPanel" android:gravity="center">
+              <com.bil24.myelement.MultiRowsRadioGroup
+                  android:id="@+id/radioGroup1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/eventSeatDayPanel">
+              </com.bil24.myelement.MultiRowsRadioGroup>
+            </LinearLayout>
+          </RelativeLayout>
+        </RelativeLayout>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:id="@+id/eventSeatTextViewFullName"
+            android:layout_below="@+id/eventSeatHeader"
+            android:layout_centerHorizontal="true" android:layout_marginTop="15dp"
+            android:textSize="@dimen/select_action_1" android:gravity="center"/>
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_below="@+id/eventSeatTextViewFullName"
+            android:id="@+id/eventSeatSeatingPlanPanel" android:layout_marginTop="20dp">
+
+            <com.rey.material.widget.Button
+                android:id="@+id/eventSeatButtonSeatingPlan"
+                style="@style/RaiseColorButtonRippleStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/bil24_button_padding"
+                android:text="@string/select_place"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/button_text_size"/>
+
+          </RelativeLayout>
+
+        <EditText
+            android:id="@+id/eventSeatPromoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventSeatSeatingPlanPanel"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/eventSeatButtonPromoCode"
+            android:ems="10"
+            android:hint="Промокоды"
+            android:inputType="textPersonName"/>
+
+        <com.rey.material.widget.Button
+            android:id="@+id/eventSeatButtonPromoCode"
+            style="@style/RaiseColorButtonRippleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="5dp"
+            android:text="Добавить"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/button_text_size"
+            android:layout_below="@+id/eventSeatSeatingPlanPanel"/>
+
+        <RelativeLayout
+            android:id="@+id/eventSeatCategoryPricePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventSeatPromoEditText"
+            android:layout_marginTop="10dp"
+            >
+
+          <com.rey.material.widget.TextView
+              android:id="@+id/eventSeatTextViewCategoryInfo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="5dp"
+              android:text="@string/category_info"
+              android:textSize="@dimen/select_action_2"/>
+
+          <com.bil24.myelement.MySpinner
+              android:id="@+id/eventSeatCategoryPriceSpinner"
+              style="@style/Material.Widget.Spinner"
+              android:layout_width="fill_parent"
+              android:layout_height="50dp"
+              android:layout_below="@+id/eventSeatTextViewCategoryInfo"
+              android:layout_centerHorizontal="true"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              app:rd_style="@style/Material.Drawable.Ripple.Wave"/>
+
+          <com.bil24.myelement.MyNumberPicker
+              android:id="@+id/eventSeatNumberPicker"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/eventSeatCategoryPriceSpinner"
+              android:layout_alignRight="@+id/eventSeatCategoryPriceSpinner"
+              android:layout_below="@+id/eventSeatCategoryPriceSpinner"
+              android:layout_marginBottom="13dp"
+              android:layout_marginTop="13dp"
+              android:gravity="right"/>
+
+          <com.rey.material.widget.Button
+              android:id="@+id/eventSeatButtonLimit"
+              style="@style/RaiseColorButtonRippleStyle"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/eventSeatNumberPicker"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="10dp"
+              android:padding="@dimen/bil24_button_padding"
+              android:text="@string/category_limit_info"
+              android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+              android:textColor="#FFFFFFFF"
+              android:textSize="@dimen/button_text_size"/>
+
+          <com.rey.material.widget.Button
+              android:id="@+id/eventSeatButtonReserve"
+              style="@style/RaiseColorButtonRippleStyle"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/eventSeatButtonLimit"
+              android:layout_centerHorizontal="true"
+              android:padding="@dimen/bil24_button_padding"
+              android:text="@string/reservation"
+              android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+              android:textColor="#FFFFFFFF"
+              android:textSize="@dimen/button_text_size"
+              />
+        </RelativeLayout>
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:id="@+id/eventSeatTextViewDuration"
+            android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
+            android:textSize="@dimen/select_action_2" android:gravity="center"
+            android:layout_below="@+id/eventSeatCategoryPricePanel"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eticket"
+            android:id="@+id/eventSeatTextViewETicket"
+            android:layout_below="@+id/eventSeatTextViewDuration"
+            android:layout_centerHorizontal="true" android:layout_marginTop="10dp"
+            android:textSize="@dimen/e_ticket_text" android:gravity="center"/>
+
+        <com.rey.material.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:id="@+id/eventSeatTextViewDescription"
+            android:layout_below="@+id/eventSeatTextViewETicket"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/select_action_2"/>
+
+      </RelativeLayout>
+    </FrameLayout>
+  </ScrollView>
+
+</com.bil24.myelement.MySwipeRefreshLayout>
+

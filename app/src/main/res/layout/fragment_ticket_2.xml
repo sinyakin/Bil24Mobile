@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ticket2FragmentMainPanel"
+                tools:context="com.bil24.fragments.Ticket2Fragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ticket_activity_info"
+        android:id="@+id/ticket2FragmentTextViewInfo" android:layout_alignParentTop="true" android:layout_margin="10dp"
+        android:textSize="@dimen/text_size_small"/>
+    <com.fortysevendeg.swipelistview.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ticket2FragmentGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:dividerHeight="10.0dp"
+        swipe:swipeFrontView="@+id/ticketAdapterTicketPanel"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeDrawableChecked="@drawable/choice_selected"
+        swipe:swipeDrawableUnchecked="@drawable/choice_unselected"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeMode="both"
+        android:layout_above="@+id/ticket2FragmentButtonShowAllQrCode"
+        android:padding="10dp" android:layout_below="@+id/ticket2FragmentTextViewInfo"/>
+
+    <com.bil24.myelement.MyLoadingPanel
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:id="@+id/ticket2FragmentLoadingPanel"
+        android:layout_marginTop="10dp" android:layout_below="@+id/ticket2FragmentTextViewInfo">
+    </com.bil24.myelement.MyLoadingPanel>
+
+    <com.rey.material.widget.Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Показать билеты как QR-коды"
+        android:textColor="#FFFFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        style="@style/RaiseColorButtonRippleStyle"
+        android:textSize="@dimen/button_text_size"
+        android:id="@+id/ticket2FragmentButtonShowAllQrCode"
+        android:padding="5dp" android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

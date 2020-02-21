@@ -1,0 +1,49 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/panel_background"
+    tools:context="com.bil24.fragments.NewsFragment">
+
+  <com.bil24.myelement.MySwipeRefreshLayout
+      android:id="@+id/newsFragmentRefresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true">
+
+    <ListView
+        android:id="@+id/newsFragmentListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:dividerHeight="10.0sp" android:padding="10dp"/>
+
+  </com.bil24.myelement.MySwipeRefreshLayout>
+
+  <com.rey.material.widget.Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="свежие новости"
+      android:textColor="#FFFFFFFF"
+      android:layout_centerHorizontal="true"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+      style="@style/RaiseColorButtonRippleStyle"
+      android:id="@+id/newsFragmentButtonForwardNews"
+      android:padding="5dp"
+      android:textSize="@dimen/button_text_size"
+      android:layout_marginTop="10dp"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/empty_news"
+      android:id="@+id/newsFragmentTVEmpty"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:padding="15dp"
+      android:gravity="center_horizontal"
+      android:textSize="18sp"
+      android:textColor="#db4a4a4a"/>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/panel_background"
+        tools:context="com.bil24.fragments.CityPassFragment">
+
+    <com.bil24.myelement.MySpinner
+        android:id="@+id/cityPassFragmentSpinnerVenueTypes"
+        style="@style/Material.Widget.Spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        app:rd_style="@style/Material.Drawable.Ripple.Wave" android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.bil24.myelement.MySwipeRefreshLayout
+        android:id="@+id/cityPassFragmentRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cityPassFragmentSpinnerVenueTypes">
+
+        <ListView
+            android:id="@+id/cityPassFragmentListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:dividerHeight="10.0sp"
+            android:padding="10dp"/>
+    </com.bil24.myelement.MySwipeRefreshLayout>
+
+    <com.bil24.myelement.MyLoadingPanel
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:id="@+id/cityPassFragmentLoadPanel"
+        android:layout_below="@+id/cityPassFragmentSpinnerVenueTypes"
+        android:layout_marginTop="10dp">
+    </com.bil24.myelement.MyLoadingPanel>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:id="@+id/cityPassFragmentTvEmpty"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="#db4a4a4a"
+        android:layout_below="@+id/cityPassFragmentSpinnerVenueTypes"/>
+</RelativeLayout>
